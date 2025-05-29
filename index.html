@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Türkiye Haritam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Gezdiğim Şehirler</h1>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([39.0, 35.0], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> katkıda bulunanlar',
+    }).addTo(map);
+
+    var istanbul = L.marker([41.0082, 28.9784]).addTo(map);
+    istanbul.bindPopup(
+      "<b>İstanbul</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Istanbul_collage_5j.jpg/250px-Istanbul_collage_5j.jpg' width='150'><br>Boğaz manzarası harikaydı!<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+    var izmir = L.marker([38.4192, 27.1287]).addTo(map);
+    izmir.bindPopup(
+      "<b>İzmir</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Izmir_collage.png/250px-Izmir_collage.png' width='150'><br>Kordon'da güzel bir yürüyüş yaptım!<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+  </script>
+</body>
+</html>
