@@ -12,7 +12,28 @@
   <h1>Gezdiğim Şehirler</h1>
   <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js">
+    var ankara = L.marker([39.9208, 32.8541]).addTo(map);
+    ankara.bindPopup(
+      "<b>Ankara</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Anitkabir_view.jpg/250px-Anitkabir_view.jpg' width='150'><br>Anıtkabir’i ziyaret ettim.<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+    var sivas = L.marker([39.7477, 37.0179]).addTo(map);
+    sivas.bindPopup(
+      "<b>Sivas</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Sivas_-_Panorama.jpg/250px-Sivas_-_Panorama.jpg' width='150'><br>Tarihi Sivas Kongresi’nin yapıldığı bina çok etkileyiciydi.<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+    var samsun = L.marker([41.2867, 36.33]).addTo(map);
+    samsun.bindPopup(
+      "<b>Samsun</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Samsun_collage_2020.png/250px-Samsun_collage_2020.png' width='150'><br>Bandırma Vapuru’nu gezdim!<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+    var erzurum = L.marker([39.9043, 41.2679]).addTo(map);
+    erzurum.bindPopup(
+      "<b>Erzurum</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Erzurum_collage.jpg/250px-Erzurum_collage.jpg' width='150'><br>Çifte Minareli Medrese büyüleyiciydi!<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+  </script>
   <script>
     var map = L.map('map').setView([39.0, 35.0], 6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -29,6 +50,27 @@
     izmir.bindPopup(
       "<b>İzmir</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Izmir_collage.png/250px-Izmir_collage.png' width='150'><br>Kordon'da güzel bir yürüyüş yaptım!<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
     );
+  
+    var ankara = L.marker([39.9208, 32.8541]).addTo(map);
+    ankara.bindPopup(
+      "<b>Ankara</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Anitkabir_view.jpg/250px-Anitkabir_view.jpg' width='150'><br>Anıtkabir’i ziyaret ettim.<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+    var sivas = L.marker([39.7477, 37.0179]).addTo(map);
+    sivas.bindPopup(
+      "<b>Sivas</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Sivas_-_Panorama.jpg/250px-Sivas_-_Panorama.jpg' width='150'><br>Tarihi Sivas Kongresi’nin yapıldığı bina çok etkileyiciydi.<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+    var samsun = L.marker([41.2867, 36.33]).addTo(map);
+    samsun.bindPopup(
+      "<b>Samsun</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Samsun_collage_2020.png/250px-Samsun_collage_2020.png' width='150'><br>Bandırma Vapuru’nu gezdim!<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
+    var erzurum = L.marker([39.9043, 41.2679]).addTo(map);
+    erzurum.bindPopup(
+      "<b>Erzurum</b><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Erzurum_collage.jpg/250px-Erzurum_collage.jpg' width='150'><br>Çifte Minareli Medrese büyüleyiciydi!<br><a href='https://www.youtube.com/watch?v=VIDEO_ID' target='_blank'>Video</a>"
+    );
+
   </script>
 </body>
 </html>
